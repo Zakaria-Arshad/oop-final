@@ -12,7 +12,6 @@ public class QuestionManager {
 
     public void addQuestion(Question question) {
         this.questions.add(question);
-        // DEBUG PRINT, CAN DELETE IT 
         saveQuestions();
     }
 

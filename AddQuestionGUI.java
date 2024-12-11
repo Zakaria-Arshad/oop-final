@@ -57,8 +57,6 @@ public class AddQuestionGUI {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Submit button clicked");
-                System.out.println("notes: "+ notesField.getText());
                 Question question = new Question(
                         titleField.getText(),
                         urlField.getText(),
@@ -69,7 +67,6 @@ public class AddQuestionGUI {
                 );
                 system.getQuestionManager().addQuestion(question);
                 // print in console
-                System.out.println("Question added: " + question);
 
                 ((JFrame) SwingUtilities.getWindowAncestor(submitButton)).dispose();
             }

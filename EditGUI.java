@@ -16,7 +16,6 @@ public class EditGUI {
     private Question currentQuestion;
 
     public EditGUI(LeetCodeTrackerSystem system, Question currentQuestion) {
-        System.out.println("EditGUI constructor called");
         this.system = system;
         this.currentQuestion = currentQuestion;
 

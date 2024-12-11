@@ -23,8 +23,6 @@ public class BrowseGUI {
         // get all questions
         QuestionManager questionManager = system.getQuestionManager();
         List<Question> questions = questionManager.getAllQuestions();
-        // DEBUG PRINT
-        // System.out.println(questions.get(0).getNoteContent());
 
         DefaultTableModel tableModel = new DefaultTableModel();
         tableModel.addColumn("Title");
@@ -35,7 +33,6 @@ public class BrowseGUI {
 
         // populate table with questions
         for (Question question : questions) {
-            System.out.println("Note content for " + question.getTitle() + ": " + question.getNoteContent());
             tableModel.addRow(new Object[] {
                 question.getTitle(),
                 question.getUrl(),
@@ -88,7 +85,6 @@ public class BrowseGUI {
         // updated qs
         List<Question> allQuestions = system.getQuestionManager().getAllQuestions();
         // print in console
-        System.out.println(allQuestions);
 
         // filters
         String selectedDifficulty = (String) filterComboBox.getSelectedItem();
@@ -110,7 +106,6 @@ public class BrowseGUI {
         DefaultTableModel tableModel = (DefaultTableModel) questionsTable.getModel();
         tableModel.setRowCount(0); // Reset table
         for (Question question : filteredQuestions) {
-            System.out.println("Note content for " + question.getTitle() + ": " + question.getNoteContent());
             tableModel.addRow(new Object[]{
                 question.getTitle(),
                 question.getUrl(),

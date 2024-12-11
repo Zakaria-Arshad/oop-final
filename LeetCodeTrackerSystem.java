@@ -16,7 +16,6 @@ public class LeetCodeTrackerSystem {
         // loads questions when app starts
         questionManager.loadQuestions();
         // debug 
-        System.out.println("QUESTIONS" + questionManager.getAllQuestions());
     }
 
     public void stop() {
